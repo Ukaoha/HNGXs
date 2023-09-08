@@ -4,27 +4,12 @@ const currentDay = daysOfWeek[currentDayIndex];
 document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent = `Current Day: ${currentDay}`;
 
 
-function updateUTCTime() {
+function displayUTCTime() {
     const now = new Date();
-    const currentUTCMilliseconds = now.getUTCMilliseconds();
-    const currentUTC = `${now.toUTCString()} ${currentUTCMilliseconds}ms`;
-    document.querySelector('[data-testid="currentUTCTime"]').textContent = `Current UTC Time: ${currentUTC}`;
+    const currentUTCMilliseconds = now.getTime();
+    document.querySelector('[data-testid="currentUTCTime"]').textContent = `Current UTC Time: ${currentUTCMilliseconds}ms`;
 }
 
-// Update the UTC time every second
-setInterval(updateUTCTime, 1000);
+displayUTCTime();
 
 
-document.querySelector('[ data-testid="slackUserName"]').textContent = 'Ukaoha Chizoba'
-document.querySelector('[  data-testid="myTrack"]').textContent = 'Track:   Frontend'
-// github
-const githubURL = "https://github.com/Ukaoha/HNGXs";
-const githubLink = document.querySelector('[data-testid="githubURL"]');
-githubLink.href = githubURL;
-githubLink.textContent = "My GitHub Repository";
-
-// img
-const profileImg = "image/profile.jpg"; 
-const slackDisplayImage = document.querySelector('[data-testid="slackDisplayImage"]');
-slackDisplayImage.src = profileImg;
-slackDisplayImage.alt = "ukaoha chizoba"; 
