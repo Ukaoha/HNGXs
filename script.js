@@ -13,7 +13,7 @@ setInterval(updateUTCTime, 1000);
 document.querySelector('[ data-testid="slackUserName"]').textContent = 'Ukaoha Chizoba'
 document.querySelector('[  data-testid="myTrack"]').textContent = 'Track:   Frontend'
 // github
-const githubURL = "https://github.com/yourusername/your-repo";
+const githubURL = "https://github.com/Ukaoha/HNGXs";
 const githubLink = document.querySelector('[data-testid="githubURL"]');
 githubLink.href = githubURL;
 githubLink.textContent = "My GitHub Repository";
