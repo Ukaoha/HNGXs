@@ -1,7 +1,8 @@
+const date = new Date()
+
 const day = document.querySelector('[data-testid=currentDayOfTheWeek]')
 const currentTime = document.querySelector('[data-testid=currentUTCTime')
 
-const date = new Date()
 
 const weekDays = [
   'Sunday',
