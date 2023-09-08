@@ -3,12 +3,17 @@ const currentDayIndex = new Date().getDay();
 const currentDay = daysOfWeek[currentDayIndex];
 document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent = `Current Day: ${currentDay}`;
 
+
 function updateUTCTime() {
-    const currentUTC = new Date().toUTCString();
+    const now = new Date();
+    const currentUTCMilliseconds = now.getUTCMilliseconds();
+    const currentUTC = `${now.toUTCString()} ${currentUTCMilliseconds}ms`;
     document.querySelector('[data-testid="currentUTCTime"]').textContent = `Current UTC Time: ${currentUTC}`;
 }
+
 // Update the UTC time every second
 setInterval(updateUTCTime, 1000);
+
 
 document.querySelector('[ data-testid="slackUserName"]').textContent = 'Ukaoha Chizoba'
 document.querySelector('[  data-testid="myTrack"]').textContent = 'Track:   Frontend'
